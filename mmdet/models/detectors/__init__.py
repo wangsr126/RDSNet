@@ -13,10 +13,11 @@ from .retinanet import RetinaNet
 from .rpn import RPN
 from .single_stage import SingleStageDetector
 from .two_stage import TwoStageDetector
+from .rdsnet import RDSNet
 
 __all__ = [
     'BaseDetector', 'SingleStageDetector', 'TwoStageDetector', 'RPN',
     'FastRCNN', 'FasterRCNN', 'MaskRCNN', 'CascadeRCNN', 'HybridTaskCascade',
     'DoubleHeadRCNN', 'RetinaNet', 'FCOS', 'GridRCNN', 'MaskScoringRCNN',
-    'RepPointsDetector'
+    'RepPointsDetector', 'RDSNet'
 ]

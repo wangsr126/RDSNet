@@ -118,3 +118,8 @@ work_dirs/
 
 # Pytorch
 *.pth
+
+# appendix
+/work_dirs
+/checkpoints
+*.txt

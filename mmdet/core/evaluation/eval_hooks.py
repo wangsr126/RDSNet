@@ -168,3 +168,6 @@ class CocoDistEvalmAPHook(DistEvalHook):
         runner.log_buffer.ready = True
         for res_type in res_types:
             os.remove(result_files[res_type])
+
+    # def before_train_epoch(self, runner):
+    #     self.after_train_epoch(runner)

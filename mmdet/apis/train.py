@@ -13,6 +13,9 @@ from mmdet.datasets import DATASETS, build_dataloader
 from mmdet.models import RPN
 from .env import get_root_logger
 
+#####
+from mmdet.core.evaluation.checkpoint_hook import CheckpointHook
+
 
 def parse_losses(losses):
     log_vars = OrderedDict()
@@ -213,6 +216,8 @@ def _non_dist_train(model, dataset, cfg, validate=False):
         optimizer_config = cfg.optimizer_config
     runner.register_training_hooks(cfg.lr_config, optimizer_config,
                                    cfg.checkpoint_config, cfg.log_config)
+    #####
+    runner.register_hook(CheckpointHook(interval=500))
 
     if cfg.resume_from:
         runner.resume(cfg.resume_from)

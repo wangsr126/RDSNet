@@ -27,7 +27,7 @@ def single_gpu_test(model, data_loader, show=False):
         results.append(result)
 
         if show:
-            model.module.show_result(data, result)
+            model.module.show_result(data, result, score_thr=0.3)
 
         batch_size = data['img'][0].size(0)
         for _ in range(batch_size):
