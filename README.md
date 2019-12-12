@@ -1,10 +1,8 @@
 ## RDSNet
 
-The Code for "RDSNet: A New Deep Architecture for Reciprocal Object Detection and Instance Segmentation"
+The Code for "[RDSNet: A New Deep Architecture for Reciprocal Object Detection and Instance Segmentation](https://arxiv.org/abs/1912.05070)"
 
 This repository is based on [mmdetection](https://github.com/open-mmlab/mmdetection).
-
-![display](demo/display.png)
 
 ![architecture](demo/framework.png)
 
@@ -13,6 +11,8 @@ This repository is based on [mmdetection](https://github.com/open-mmlab/mmdetect
 Please refer to [INSTALL.md](docs/INSTALL.md) for installation and dataset preparation.
 
 ## Performance on COCO
+
+![display](demo/display.png)
 
 | Backbone              | Iteration | MBRM  |  Training scales  | AP<sup>bb</sup><br>(minival) | AP<sup>m</sup><br>(minival) | AP<sup>bb</sup><br>(test-dev) | AP<sup>m</sup><br>(test-dev)|  Model      |
 | :-------------------: | :-------: | :---: | :---------------: | :-------------: | :--------------: | :-------------: | :--------------: | :--------: |
@@ -23,7 +23,7 @@ Please refer to [INSTALL.md](docs/INSTALL.md) for installation and dataset prepa
 | ResNet-101-FPN        | 180k      | N     | [640, 800]        | 40.8            | 36.2             | 40.9            | 36.4             | [Link](https://drive.google.com/open?id=1uB7IlN9crzZCNE8Q40q4dRehtbeiyB3F )                                                      |
 | ResNet-101-FPN        | -         | Y     | -                 | 41.8            | 36.2             | 41.8            | 36.4             |                                                      |
 
-The models with MBRM share the same parameters with those w/o MBRM, since the additional parameters in MBRM have been provided in the code. 
+The models with MBRM share the same parameters as those w/o MBRM, since the additional parameters in MBRM have been provided in the code. 
 
 ## Get Started
 
@@ -39,6 +39,7 @@ python tools/test.py configs/rdsnet/rdsnet_r50_fpn_1x.py \
     --show
 ```
 ### Config Files:
+
 | Config File                                          | Backbone              | Iteration |  Training scales  | MBRM  |
 | :--------------------------------------------------: | :-------------------: | :-------: | :---------------: | :---: |
 | rdsnet_r50_fpn_1x.py                  | ResNet-50-FPN         | 90k       | 800               | N     |
@@ -95,3 +96,14 @@ For some other high-level apis, please refer to [GETTING_STARTED.md](docs/GETTIN
 
 Please consider citing our paper in your publications if the project helps your research.
 
+```bash
+@misc{wang2019rdsnet,
+    title={RDSNet: A New Deep Architecture for Reciprocal Object Detection and Instance Segmentation},
+    author={Shaoru Wang and Yongchao Gong and Junliang Xing and Lichao Huang and Chang Huang and Weiming Hu},
+    year={2019},
+    eprint={1912.05070},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
+
+```
